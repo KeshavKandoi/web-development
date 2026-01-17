@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <script>
+
+
+//async return promise always
+// await pauses the execution of its surrounding async function until the promise is settled
+// jab tak promise pending hai tabtak wait karte rahe gaye . 
+
+// async
+
+async function hello(){
+  console.log("hello")
+
+};
+
+//await
+
+//  await ko use krne k liye usko function mai dalna padta h phle n then call krna hota h.
+
+
+
+function api(){
+  return new Promise((resolve,reject) =>{
+    setTimeout(() =>{
+      console.log("weather data");
+      resolve(200);
+    },2000);
+  });
+  
+}
+async function getWeatherData(){
+  await api(); //1st call
+  await api(); //2nd call
+}
+
+
+function getData(dataId){
+  return new Promise((resolve,reject) =>{
+    setTimeout(() =>{
+    console.log("data",dataId);
+   resolve("success")
+    
+  },2000);
+
+  })
+  
+}
+ //async-await
+
+ async function getAllData(){
+  console.log("getting data1...");
+  await getData(1);
+  console.log("getting data2...");
+  await getData(2);
+  console.log("getting data3...");
+  await getData(3);
+  console.log("getting data4...");
+  await getData(4);
+  console.log("getting data5...");
+  await getData(5);
+  
+  
+ }
+
+//console mai call krna getAllData() tab aaye ga
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> project </title>
+    <style>
+      .cs-button{
+        border: None;
+        font-weight: bold;
+        background-color:black ;
+        color: white;
+        padding-left: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 15px;
+        cursor: pointer;
+        border-radius: 50px;
+        
+      }
+      .is-subscribed{
+        background-color:rgb(240,240,240);
+        color: black;
+
+      }
+      body{
+        font-family:Arial;
+      }
+
+    </style>
+  </head>
+  <body>
+    <p> You Tube Subscribe Button</p>
+
+    <button onclick = 
+    subscribe() class = "js-button cs-button">subscribe</button>
+
+    <script>
+      function subscribe(){
+
+        const buttonElement = document.querySelector('.js-button');
+
+    if(buttonElement.innerText === 'subscribe'){
+
+      document.querySelector('.js-button').innerText= 'subscribed';
+      buttonElement.classList.add('is-subscribed');
+    }
+    else{
+      document.querySelector('.js-button').innerText= 'subscribe';
+      buttonElement.classList.remove('is-subscribed')
+
+    }
+
+      }
+
+    </script>
+  </body>
+</html>

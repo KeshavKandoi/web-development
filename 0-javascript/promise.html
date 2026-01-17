@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <script>
+
+
+
+
+
+
+
+
+/*
+
+let promise = new Promise((resolve , reject) =>{
+  console.log("i am a promise")
+  resolve("no error")
+  // we can also use reje ct
+
+});
+
+*/
+
+const getPromise = () =>{
+  return  new Promise((resolve ,reject) =>{
+    console.log(" i m a promise")
+    resolve("success");
+    //reject("error"); fulfil na hone pe reject if fulfulfil then resolve
+
+ 
+  })
+};
+
+let promise = getPromise();
+  promise.then((res) =>{
+    console.log("promise fulfiled",res)
+  });
+
+  promise.catch((err) =>{
+    console.log("rejected",err);
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

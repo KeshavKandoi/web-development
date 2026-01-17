@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      objects
+    </title>
+
+  </head>
+  <body>
+    <script>
+      let product = {
+        name: 'socks',
+        price: 1990
+      };
+      console.log(product);
+      console.log(product.name);
+      console.log(product.price);
+
+      product.name = 'cotton sucks '
+      console.log(product);
+      console.log(product.name);
+
+      product.newproperty = true;
+      console.log(product);
+
+      delete product.newproperty;
+      console.log(product);
+
+
+       let product2={
+        name: 'shirt',
+        'delivery-time': '1 day',
+        rating: {
+          stars: 4.5,
+          count: 87
+        },
+        fun: function function1(){
+          console.log('function inside objects');
+        }
+      };
+      console.log(product2);
+      console.log(product2.name);
+      console.log(product2['name']);
+      console.log(product2['delivery-time']);
+      console.log(product2.rating.count);
+      product2.fun();
+      console.log(typeof console.log);
+      console.log(typeof product2);
+
+      console.log(JSON.stringify(product2));
+      console.log(typeof product2);
+//json.stringfy convert object into string
+      const kk=JSON.stringify(product2);
+      console.log(kk);
+      console.log(typeof kk);
+
+
+
+
+      const jsonString = JSON.stringify(product2);
+      console.log(JSON.parse(jsonString));
+
+
+      console.log('hello'.length);
+      console.log('hello'.toUpperCase())
+
+      const object1 = {
+        message: 'hello',
+        price: 799
+      };
+      const object2 = object1;
+
+      console.log(object1);
+      console.log(object2);
+
+
+      object1.message = 'Good job!';
+      console.log(object1);
+      console.log(object2);
+
+      const object3 = {
+        message: 'Good job!',
+        price: 799
+      };
+      // objects are references not a value so we are comparing the reference not a value 
+      
+      console.log(object1 === object3);
+      console.log(object1 === object2);
+      
+      const object4 = {
+        message: 'Good joob!',
+        price: 788
+      };
+
+     // const message =object4.message ;
+      //console.log(message);
+
+      //  same thing
+      
+      const { message,price } = object4;
+      console.log(message);
+      console.log(price);
+
+      //const { message, price: cost } = object1;
+      //console.log(message);
+      //console.log(cost);
+
+      const objects5 = {
+        message: message
+      };
+       console.log(objects5);
+
+      
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
