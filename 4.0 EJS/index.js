@@ -1,30 +1,17 @@
-import express  from "express";
+const express=require("express");
+const app=express()
+ //const path =require("path"); //-------same for this  also
 
-const app = express();
-const port = 3000;
+const port=3000;
 
-app.get("/" , (req,res) => {
+app.set("view engine","ejs")
 
-  const today = new Date();  //("june 22,2025 11:13:00");
-  const day = today.getDay();
+// app.set("views",path.join(__dirname,"views")) //-------- agar humko ejs folder mai bina aaye direct bahar se run karna h to iska use karte hai 
 
-  //console.log(day);
-
-  let type = "a weekday";
-  let adv ="it's time to work hard";
-
-  if ( day===0 || day===6 ){
-    type ="the weekend";
-    adv = "it's time to have some fun "
-  }
-
-   
-  res.render("index.ejs",{
-    dayType: type,
-    advice: adv,
-  });
+app.get("/",(req,res)=>{
+  res.render("home.ejs")
 });
 
-app.listen(port,() =>{
-  console.log(`server running on port ${port}.`);
+app.listen(port,()=>{
+  console.log(`listening on port${port}`)
 });

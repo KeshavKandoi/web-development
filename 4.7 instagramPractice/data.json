@@ -1,0 +1,37 @@
+{
+  "cat": {
+    "name": "Whiskers",
+    "following": 120,
+    "followers": 450,
+    "posts": [
+      {
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnGtdtibstB6p2O5DLSwm_nxYJfr1SEIVP8A&s",
+        "likes": 230,
+        "comments": 17
+      },
+      {
+        "image": "https://pethelpful.com/.image/w_3840,q_auto:good,c_limit/MTk2NzY3MjA5ODc0MjY5ODI2/top-10-cutest-cat-photos-of-all-time.jpg",
+        "likes": 310,
+        "comments": 18
+      }
+    ]
+  },
+
+  "dog": {
+    "name": "Buddy",
+    "following": 200,
+    "followers": 800,
+    "posts": [
+      {
+        "image": "https://images.squarespace-cdn.com/content/v1/54822a56e4b0b30bd821480c/45ed8ecf-0bb2-4e34-8fcf-624db47c43c8/Golden+Retrievers+dans+pet+care.jpeg",
+        "likes": 500,
+        "comments": 20
+      },
+      {
+        "image": "https://images.squarespace-cdn.com/content/v1/54822a56e4b0b30bd821480c/45ed8ecf-0bb2-4e34-8fcf-624db47c43c8/Golden+Retrievers+dans+pet+care.jpeg",
+        "likes": 620,
+        "comments": 21
+      }
+    ]
+  }
+}
