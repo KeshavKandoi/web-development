@@ -1,13 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>frontend</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GET & POST Requests</title>
+</head>
+<body>
+  <h3> GET Request form</h3>
+  <form method="get" action="http://localhost:3000/register">
+    <input placeholder="enter username" name="user" type="text"/>
+    <input placeholder="enter password" name="password" type="password"/>
+    <button>Submit</button>
+    </form>
+    <hr/>
+    <h3> POST Request form</h3>
+  <form method="post" action="http://localhost:3000/register">
+    <input placeholder="enter username" name="user" type="text"/>
+    <input placeholder="enter password" name="password" type="password"/>
+    <button>Submit</button>
+    </form>
+</body>
 </html>
