@@ -1,5 +1,5 @@
 {
-  "name": "4.9-sqlclass",
+  "name": "zzz",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,11 +11,9 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "@faker-js/faker": "^10.2.0",
     "ejs": "^4.0.1",
     "express": "^5.2.1",
     "method-override": "^3.0.0",
-    "mysql2": "^3.16.1",
     "uuid": "^13.0.0"
   }
 }
