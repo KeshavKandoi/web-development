@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>whatsapp</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+
+  <form method="get" action="/chats/new">
+    <button> new chat</button>
+  </form>
+
+
+
+ <% for(chat of chats) {%>
+  <div class="chats">
+    <p>From:<%=chat.from%></p>
+    <div class="message">
+      <p><%=chat.message%></p>
+
+      
+      <form method="GET" action="/chats/<%=chat._id%>/edit">  
+        <!-- mongo mai id nahi _id likhete hai  -->
+        <button>EDIT</button>
+
+      </form>
+      <br/>
+      <form method="POST" action="/chats/<%=chat._id%>?_method=DELETE">
+        <button>DELETE</button>
+
+      </form>
+      <form method="GET" action="/chats/<%=chat._id%>">
+        <button>SHOW</button>
+
+      </form>
+
+    </div>
+    <p>Received to:<%=chat.to%></p>
+    <hr/>
+    <p><%=chat.created_at.toString().split(" ")[4]%></p>
+    <p><%=chat.created_at.toString().split(" ").slice(0,4).join("- ")%></p>
+  </div>
+  <br/>
+  <br/>
+
+<%}%>
+  
+</body>
+</html>
