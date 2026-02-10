@@ -1,0 +1,26 @@
+
+<% layout("layout/boilerplate") %>
+
+  <form method="POST" action="/form/<%=forms.id%>?_method=PATCH">
+    <input 
+    name="First_name" 
+    value="<%= forms.First_name %>" 
+  /><br><br>
+
+  <input 
+    name="Last_name" 
+    value="<%= forms.Last_name %>" 
+  /><br><br>
+
+  <input 
+    name="Phone_Number" 
+    value="<%= forms.Phone_Number %>" 
+  /><br><br>
+
+  <input 
+    name="email" 
+    value="<%= forms.email %>" 
+  /><br><br>
+
+  <button type="submit">UPDATE</button>
+  </form>

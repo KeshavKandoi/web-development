@@ -33,38 +33,55 @@ const customerSchema=new Schema({
   ]
 });
 
+// customerSchema.pre("findOneAndDelete",async()=>{
+//   console.log("PRE MIDDLEWARE")
+// })
+
+customerSchema.post("findOneAndDelete",async(customer)=>{
+  if(customer.orders.length){
+ let res=await Order.deleteMany({_id:{$in:customer.orders}});
+ console.log(res);
+  }
+
+});
+
+
 const Order=mongoose.model("Order",orderSchema);
 const Customer=mongoose.model("Customer",customerSchema);
 
 const findCustomer=async()=>{
-
-  // let cust1=new Customer({
-  //   name:"Rahul Kumar",
- 
-  // })
-  // let order1=await Order.findOne({item:"Chips"});
-  // let order2=await Order.findOne({item:"Pizza"});
-
-  // cust1.orders.push(order1);
-  // cust1.orders.push(order2);
-
-  // let result=await cust1.save();
-  // console.log(result)
-
-  // object ka details ke liye populate use karte hai
   let result=await Customer.find({}).populate("orders");
-  console.log(result[0]) 
+  console.log(result[0])  
 }
-findCustomer();
 
-// const addOrders=async()=>{
-//   let res=await   Order.insertMany([
 
-//     {item:"Samosa",price:12},
-//     {item:"Chips",price:10},
-//     {item:"Pizza",price:120},
-//   ]);
-//   console.log(res)
-// };
-// addOrders();
- 
+const addCust=async()=>{
+  let newCust=new Customer({
+    name:"karan Arjun",
+  });
+
+  let newOrder=new Order({
+    item:"Pan cake",
+    price:250,
+  })
+
+  newCust.orders.push(newOrder);
+
+  await newOrder.save();
+  await newCust.save();
+
+  console.log("added new customer")
+
+}
+
+// addCust();
+
+
+const delCust=async()=>{
+  let data=await Customer.findByIdAndDelete("697e66ed161f91c10e8afa33")
+  console.log(data);
+
+};
+
+delCust();
+//ise method se customer mai se delete to ho gaya but orders se delete nahio hoga 

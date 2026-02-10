@@ -51,11 +51,16 @@ const postSchema=new Schema({
 //   await post1.save();
 // };
 
-// addData();
-
 
 const User=mongoose.model("User",userSchema);
 const Post=mongoose.model("Post",postSchema);
+
+
+
+
+
+
+
 const addData=async()=>{
 
 

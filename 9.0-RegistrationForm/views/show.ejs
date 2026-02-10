@@ -1,0 +1,19 @@
+<% layout("layout/boilerplate") %>
+
+  <%for(let data of datas){%>
+    <p> id:<%=data.id%></p>
+    <p>FIRST_NAME:<%=data.First_name%></p>
+    <p>Last_NAME:<%=data.Last_name%></p>
+    <p>phone_number:<%=data.Phone_Number%></p>
+    <p>email:<%=data.email%></p>
+
+    <form method="GET" action="/form/<%= data.id %>">
+      <button type="submit">SHOW</button>
+    </form>
+    
+<br/>
+  <%}%>
+  <br/><br/>
+<a href="http://localhost:8000/form/new">CREATE NEW</a>
+
+  

@@ -1,0 +1,20 @@
+<% layout("layout/boilerplate") %>
+
+  <h3> form in detail</h3>
+  <h3>  your details  are  <%= forms.id%></h3>
+
+  <p>FIRST_NAME:<%=forms.First_name%></p>
+    <p>Last_NAME:<%=forms.Last_name%></p>
+    <p>phone_number:<%=forms.Phone_Number%></p>
+    <p>email:<%=forms.email%></p>
+
+  <form method="get" action="/form/<%=forms.id%>/edit">
+    <button>UPDATE</button>
+  </form>
+
+    <form method="POST" action="/form/<%=forms.id%>?_method=DELETE">
+      <button>DELETE</button>
+    </form>
+
+
+
